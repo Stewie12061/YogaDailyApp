@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/all"
+    tools:context=".BmiFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/top_banner"
+        android:layout_width="380dp"
+        android:layout_height="220dp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            app:cardMaxElevation="20dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="518dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/txtHeightInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/primetime"
+            android:text="Height"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <EditText
+            android:id="@+id/edtHeightInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/orange"
+            android:textAlignment="center"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border_bottom"
+            android:ems="7"
+            android:hint="cm"
+            android:fontFamily="@font/gothic"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/hint"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtHeightInfo"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="@+id/txtHeightInfo"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeightInfo" />
+
+        <TextView
+            android:id="@+id/txtWeightInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/primetime"
+            android:text="Weight"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="27dp"
+            app:layout_constraintEnd_toEndOf="@+id/edtHeightInfo"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="@+id/edtHeightInfo"
+            app:layout_constraintTop_toBottomOf="@+id/edtHeightInfo" />
+
+        <EditText
+            android:id="@+id/edtWeightInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border_bottom"
+            android:ems="7"
+            android:textColor="@color/orange"
+            android:hint="kg"
+            android:textAlignment="center"
+            android:fontFamily="@font/gothic"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/hint"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtWeightInfo"
+            app:layout_constraintStart_toStartOf="@+id/txtWeightInfo"
+            app:layout_constraintTop_toBottomOf="@+id/txtWeightInfo" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Calculate"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtWeightInfo" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/rounded_squared_white"
+            android:fontFamily="@font/primetime"
+            android:padding="3dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Body mass index"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resultcard"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            app:cardMaxElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="BMI"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/bmi"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/resulttxt"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/mnuHome"
+        android:icon="@drawable/home"/>
+    <item android:title="Food"
+        android:id="@+id/mnuFood"
+        android:icon="@drawable/fork"/>
+    <item android:title="Dashboard"
+        android:id="@+id/mnuDashboard"
+        android:icon="@drawable/dashboard"/>
+    <item android:title="BMI"
+        android:id="@+id/mnuBMI"
+        android:icon="@drawable/bmi"/>
+</menu>

@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">YogaDaily</string>
+    <string name="quote">"Yoga is complementary -
+adding energy, strength
+and beauty to the body,
+       mind and soul."</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- home -->
+    <string name="name_pose_1">The Lotus Pose</string>
+    <string name="name_pose_2">Downward Facing Dog</string>
+    <string name="name_pose_3">Half Lord of the Fishes</string>
+    <string name="name_pose_4">Head to Knee Forward Bend</string>v
+    <string name="name_pose_5">Supported Headstand</string>
+    <string name="name_pose_6">Four-Limbed Staff Pose</string>
+    <string name="name_pose_7">Extended Triangle Pose</string>
+    <string name="name_pose_8">Revolved Chair Pose</string>
+    <string name="name_pose_9">Supported Bridge Pose</string>
+    <string name="name_pose_10">Legs-up-the-Wall Pose</string>
+
+    <!-- food -->
+    <string name="diet1">Most people who practice yoga in the morning usually do not eat anything before the practice session. Therefore, you need to provide at least half a liter of water for the body immediately after exercise, add protein, fat and carbohydrates. You can apply the following menu:</string>
+    <string name="diet2">Stir-fried tofu with coconut oil, brown rice bread and vegetables,
+                        1 glass of fruit, vegetable and chia seed smoothie,
+                        1 banana and a handful of almonds,
+                        1 cup of oats,
+    </string>
+    <string name="diet3">If you practice at noon, you need to provide adequate nutrition for your body with the following suggested menu:</string>
+    <string name="diet4">Hummus (made from scratch, olive oil, lemon juice...), brown bread.
+1 bowl of salad with cooked cereal, a few slices of avocado or beans.</string>
+    <string name="diet5">If you practice yoga in the afternoon, you may still be full after lunch and do not want to eat anything yet. However, to have enough endurance and exercise more effectively, you should eat a snack before training according to the following suggestions:</string>
+    <string name="diet6">100g meat (should use white meat such as chicken breast, fish fillet, ...),
+100g chickpeas: provide fiber,
+2-3 bananas: good for digestion,
+1 apple: provides vitamins and essential nutrients,
+1 vanilla ice cream: low energy and helps you feel more comfortable after a strict diet</string>
+
+
+    <string name="food_name_1_1">Banana</string>
+    <string name="food_name_1_2">Fruit juice</string>
+    <string name="food_name_1_3">Dried fruit and nut</string>
+    <string name="food_name_1_4">Berry</string>
+    <string name="food_name_1_5">Almond</string>
+    <string name="food_name_1_6">Yogurt</string>
+
+    <string name="food_des_1_1">Bananas are nutritious but very cheap. This is a fruit that contains a lot of potassium, making it an ideal pre-workout snack for effective weight loss. Bananas contain magnesium, which aids in preventing bloating and muscle cramps. You can eat it with a salad or make a smoothie to drink.</string>
+    <string name="food_des_1_2">You can make this drink at home just to be safe. For weight loss, smoothies provide the necessary nutrients and moisture. You can combine many fruits to make a smoothie you want. You can use fruits like pineapple, apple, orange, melon and kiwi.
+
+Using fat-free yogurt is a great idea to make a nutritious smoothie. It is better if you do not add sugar when making smoothies because the natural sugar in fruit is enough.</string>
+    <string name="food_des_1_3">You can eat dried fruits and nuts before going to a yoga class or doing yoga at home to lose weight. However, you must ensure that the nuts do not exceed 300 calories.</string>
+    <string name="food_des_1_4">Berries are packed with vitamins, antioxidants and fiber. You can eat berries like you eat strawberries and blueberries. The natural sugar content in the fruit will help you energize to do exercises with fast weight loss effects.</string>
+    <string name="food_des_1_5">Eating almonds helps you get more energy to exercise. You can try eating soaked almonds. However, it should be noted not to choose the type that is pre-salted even though it is sold at a bargain price. Natural almonds are still the best choice for you. Almonds contain vitamin E, magnesium and healthy fats.</string>
+    <string name="food_des_1_6">You can eat it alone or mix it with fruits to make smoothies. Some people even eat yogurt with oats. Since you are trying to lose weight, just drink some low-fat or fat-free yogurt. Just that is enough to provide a necessary source of energy for the training session.</string>
+
+    <string name="food_name_2_1">Fruit juice</string>
+    <string name="food_name_2_2">Vegetable salad</string>
+    <string name="food_name_2_3">Vegetable soup to reduce fat</string>
+    <string name="food_name_2_4">Green tea</string>
+    <string name="food_name_2_5">Whole grain toast with egg whites</string>
+
+    <string name="food_des_2_1">You can enjoy 1 glass of fruit juice after yoga class, enjoy different juices every day, do not add sugar in any form, fruit already has natural sugar, water, natural juice is a better choice than any bottled fruit drink.</string>
+    <string name="food_des_2_2">Homemade vegetable soup or salad will be a good choice for you to replenish energy after each training session. You can use carrots, celery, and cabbage for processing. Do not buy processed foods in the supermarket because these foods contain excess sodium – not good for health.</string>
+    <string name="food_des_2_3">What could be more wonderful than after each training session you give yourself a bowl of delicious vegetables. This soup you can eat anytime you feel hungry.
+
+It adds no calories to your body, so the more you eat, the more weight you lose, the more fat you lose. If you have to go to work or go away, you can use a thermos to keep warm, and eat throughout the day.</string>
+    <string name="food_des_2_4">Green tea has a lot of health benefits and is better than a lot of drinks. It would be ideal for you to drink green tea after yoga sessions. It helps to increase blood circulation and the antioxidants present in green tea are circulated throughout the body. The combination of yoga and green tea also acts as a great stress reliever.</string>
+    <string name="food_des_2_5">Đây là món ăn bạn có thể bổ sung vào chế độ ăn dành cho người tập yoga giảm cân. Lòng trắng trứng chứa nhiều protein và không chứa cholesterol. Bánh mì ngũ cốc nguyên hạt chứa cacbonhydrat đảm bảo bạn sẽ được tiếp thêm sinh lực trong một thời gian dài. Bạn cũng có thể ăn kèm món này với sa lát nếu muốn.</string>
+
+
+    <!-- abs -->
+    <string name="poses_abs_name_1">Boat Pose</string>
+    <string name="poses_abs_des_1">Boat Pose, or Paripurna Navasana, requires you to balance on the tripod of your sitting bones and tailbone to build mental and physical focus, inspiring a full-body awareness.t</string>
+    <string name="poses_abs_name_2">Bridge Pose</string>
+    <string name="poses_abs_des_2">Setu Bandha Sarvangasana can be whatever you need—energizing, rejuvenating, or luxuriously restorative.</string>
+    <string name="poses_abs_name_3">Crow Pose</string>
+    <string name="poses_abs_des_3">A compact arm balance, Crow Pose and Crane Pose tone the abs and the arms, strengthen in the core, and focus the mind.</string>
+    <string name="poses_abs_name_4">Forearm Plank</string>
+    <string name="poses_abs_des_4">A modification of Plank Pose, Forearm Plank strengthens and tones the core, thighs, and arms.</string>
+    <string name="poses_abs_name_5">Eight-Angle Pose</string>
+    <string name="poses_abs_des_5">Fire up your abs for this difficult asymmetrical arm balance, Eight-Angle Pose.</string>
+    <string name="poses_abs_name_6">Extended Puppy Pose</string>
+    <string name="poses_abs_des_6">A cross between Child Pose and Downward-Facing Dog, Extended Puppy Pose lengthens the spine and calms the mind.</string>
+    <string name="poses_abs_name_7">Firefly Pose</string>
+    <string name="poses_abs_des_7">Want to fly? Fire up your core. Firefly pose is an arm balance pose that requires more core strength than arm strength.</string>
+    <string name="poses_abs_name_8">King Pigeon Pose</string>
+    <string name="poses_abs_des_8">Kapotasana invigorates your body and gives your spirits a lift. This extremely deep backbend is appropriate for advanced practitioners only.</string>
+    <string name="poses_abs_name_9">Four-Limbed Staff Pose</string>
+    <string name="poses_abs_des_9">Chaturanga Dandasana is not merely a push-up. This pivotal yoga pose is instrumental—so it is important to practice it properly.</string>
+    <string name="poses_abs_name_10">Gate Pose</string>
+    <string name="poses_abs_des_10">Extend some love to your often neglected side body in Parighasana or Gate Pose.</string>
+
+    !-- arm -->
+    <string name="poses_arms"></string>
+
+
+    !-- hip -->
+    <string name="poses_hips"></string>
+
+    !-- knee -->
+    <string name="poses_knees"></string>
+
+
+    !-- back -->
+    <string name="poses_back"></string>
+
+
+    !-- leg -->
+    <string name="poses_legs"></string>
+</resources>

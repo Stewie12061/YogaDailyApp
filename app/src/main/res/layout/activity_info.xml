@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:background="@drawable/welcomeimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:padding="5dp"
+            android:text="Fill in your information"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:fontFamily="@font/primetime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/primetime"
+            android:text="Your Name"
+            android:textColor="@color/black"
+            android:textSize="27dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_bottom"
+            android:ems="10"
+            android:textColor="@color/orange"
+            android:hint="ex: Stewie"
+            android:paddingStart="10dp"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/hint"
+            android:textSize="25dp"
+            android:fontFamily="@font/gothic"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+        <TextView
+            android:id="@+id/txtHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Height"
+            android:fontFamily="@font/primetime"
+            android:textAlignment="center"
+            android:textSize="27dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/edtName"
+            app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+        <EditText
+            android:id="@+id/edtHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_bottom"
+            android:ems="10"
+            android:hint="ex: 170cm"
+            android:fontFamily="@font/gothic"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/hint"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="@+id/txtHeight"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
+
+        <TextView
+            android:id="@+id/txtWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Weight"
+            android:textAlignment="center"
+            android:textSize="27dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/primetime"
+            app:layout_constraintStart_toStartOf="@+id/edtHeight"
+            app:layout_constraintTop_toBottomOf="@+id/edtHeight" />
+
+        <EditText
+            android:id="@+id/edtWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_bottom"
+            android:ems="10"
+            android:hint="ex: 70kg"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/hint"
+            android:textSize="25dp"
+            android:fontFamily="@font/gothic"
+            app:layout_constraintStart_toStartOf="@+id/txtWeight"
+            app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
+
+        <TextView
+            android:id="@+id/txtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Age"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="27dp"
+            android:fontFamily="@font/primetime"
+            app:layout_constraintStart_toStartOf="@+id/edtWeight"
+            app:layout_constraintTop_toBottomOf="@+id/edtWeight" />
+
+        <EditText
+            android:id="@+id/edtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_bottom"
+            android:ems="10"
+            android:hint="ex: 20"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/hint"
+            android:textSize="25dp"
+            android:fontFamily="@font/gothic"
+            app:layout_constraintStart_toStartOf="@+id/txtAge"
+            app:layout_constraintTop_toBottomOf="@+id/txtAge" />
+
+        <TextView
+            android:id="@+id/txtGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Gender"
+            android:textColor="@color/black"
+            android:textSize="27dp"
+            android:fontFamily="@font/primetime"
+            app:layout_constraintStart_toStartOf="@+id/edtAge"
+            app:layout_constraintTop_toBottomOf="@+id/edtAge" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintStart_toStartOf="@+id/txtGender"
+            app:layout_constraintTop_toBottomOf="@+id/txtGender">
+
+            <RadioButton
+                android:id="@+id/rbMen"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotomedium"
+                android:text="Men"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="713dp" />
+
+            <RadioButton
+                android:id="@+id/rbWomen"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotomedium"
+                android:text="Women"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                tools:layout_editor_absoluteX="266dp"
+                tools:layout_editor_absoluteY="713dp" />
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinute"
+            android:layout_width="186dp"
+            android:layout_height="57dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/rounded_squared"
+            android:fontFamily="@font/primetime"
+            android:text="continute"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
