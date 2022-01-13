@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         display(R.id.mnuHome);
         bottomNavigationView = findViewById(R.id.bottomNav);
@@ -52,19 +52,15 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = null;
         switch (id) {
             case R.id.mnuHome:
-//                toolbar.setTitle("Home");
                 fragment = new HomeFragment();
                 break;
             case R.id.mnuFood:
-//                toolbar.setTitle("Food");
                 fragment = new FoodFragment();
                 break;
             case R.id.mnuDashboard:
-//                toolbar.setTitle("Dashboard");
                 fragment = new DashboardFragment();
                 break;
             case R.id.mnuBMI:
-//                toolbar.setTitle("BMI");
                 fragment = new BmiFragment();
                 break;
         }

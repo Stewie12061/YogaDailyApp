@@ -5,6 +5,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,12 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemVH> {
+public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemVH> implements Filterable {
     ArrayList<Items> arrayList;
+    ArrayList<Items> arrayListFilter;
     Listener listener;
 
     public ItemAdapter(ArrayList<Items> arrayList, Listener listener) {
         this.arrayList = arrayList;
+        this.arrayListFilter = arrayList;
         this.listener = listener;
     }
 
@@ -47,10 +51,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemVH> {
         void onClick(Items items);
     }
 
-
     @Override
     public int getItemCount() {
         return arrayList.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+        return new ItemsFilter();
     }
 
     class ItemVH extends RecyclerView.ViewHolder{
@@ -63,7 +71,35 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemVH> {
             txt_item_name = itemView.findViewById(R.id.textItemName);
             txt_item_des = itemView.findViewById(R.id.textItemDes);
         }
+    }
 
+    class ItemsFilter extends Filter{
 
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            String charString = constraint.toString();
+            if (charString.isEmpty()){
+                arrayListFilter = arrayList;
+            }
+            else {
+                ArrayList<Items> filteredList = new ArrayList<>();
+                for (Items row : arrayList){
+                    if (row.itemName.toLowerCase().contains(charString.toLowerCase()) || row.itemDes.contains(charString)){
+                        filteredList.add(row);
+                    }
+                }
+
+                arrayListFilter = filteredList;
+            }
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = arrayListFilter;
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults results) {
+            arrayListFilter = (ArrayList<Items>) results.values;
+            notifyDataSetChanged();
+        }
     }
 }

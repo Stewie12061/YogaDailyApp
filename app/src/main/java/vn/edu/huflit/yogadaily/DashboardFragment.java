@@ -101,4 +101,15 @@ public class DashboardFragment extends Fragment implements DashboardAdapter.List
         ft.commit();
 
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((MainActivity)getActivity()).getSupportActionBar().hide();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        ((MainActivity)getActivity()).getSupportActionBar().show();
+    }
 }

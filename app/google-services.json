@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "984479806401",
+    "firebase_url": "https://yogadaily-f6f7e-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "yogadaily-f6f7e",
+    "storage_bucket": "yogadaily-f6f7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984479806401:android:d51008bd7f7b8869203540",
+        "android_client_info": {
+          "package_name": "vn.edu.huflit.yogadaily"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984479806401-u15cqmie2p71kgioghd9hdptq6873soo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEy6Ak9BqHnjbZbf9yefA50oULiMYrZyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984479806401-u15cqmie2p71kgioghd9hdptq6873soo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
