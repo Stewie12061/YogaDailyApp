@@ -15,9 +15,11 @@ import java.util.ArrayList;
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeVH> {
 
     ArrayList<PopularPoses> arrayList;
+    Listener listener;
 
-    public HomeAdapter(ArrayList<PopularPoses> arrayList) {
+    public HomeAdapter(ArrayList<PopularPoses> arrayList, Listener listener) {
         this.arrayList = arrayList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -33,6 +35,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeVH> {
         PopularPoses popularPoses = arrayList.get(position);
         holder.txtHomeItemName.setText(popularPoses.name);
         holder.imgHomeItem.setImageResource(popularPoses.image);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onClick(popularPoses);
+            }
+        });
     }
 
     @Override
@@ -51,5 +59,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeVH> {
             txtHomeItemName = itemView.findViewById(R.id.Txt_home_item_name);
             imgHomeItem = itemView.findViewById(R.id.Img_home_item);
         }
+    }
+    interface Listener{
+        void onClick(PopularPoses popularPoses);
     }
 }

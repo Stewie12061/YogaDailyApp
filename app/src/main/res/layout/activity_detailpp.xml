@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/detail_bg"
-    tools:context=".DetailActivity">
+    tools:context=".DetailppActivity">
 
     <ImageView
-        android:id="@+id/detailImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:id="@+id/detailppImg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/poses_abs_1" />
+        app:srcCompat="@drawable/tuthe_yoga_1" />
 
     <TextView
-        android:id="@+id/detailName"
+        android:id="@+id/detailppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="684dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearDetail"
+        android:id="@+id/linearDetailpp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/minute"
+            android:id="@+id/minutepp"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/rounded_squared"
@@ -73,7 +73,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/second"
+            android:id="@+id/secondpp"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/rounded_squared"
@@ -85,7 +85,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_start_pause"
+        android:id="@+id/button_start_pausepp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -97,10 +97,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/linearDetailpp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_reset"
+        android:id="@+id/button_resetpp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -114,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_start_pause" />
+        app:layout_constraintTop_toBottomOf="@+id/button_start_pausepp" />
 
 
 

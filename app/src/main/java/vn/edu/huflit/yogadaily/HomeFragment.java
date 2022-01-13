@@ -30,7 +30,7 @@ import me.itangqi.waveloadingview.WaveLoadingView;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements HomeAdapter.Listener{
 
     ArrayList<PopularPoses> arrayList;
     TextView textView;
@@ -98,7 +98,7 @@ public class HomeFragment extends Fragment {
 
         rcHome = view.findViewById(R.id.rcHome);
         arrayList = DataHomeItem.init_item(getContext());
-        homeAdapter = new HomeAdapter(arrayList);
+        homeAdapter = new HomeAdapter(arrayList,this);
 
         rcHome.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         rcHome.setAdapter(homeAdapter);
@@ -111,4 +111,10 @@ public class HomeFragment extends Fragment {
 
     }
 
+    @Override
+    public void onClick(PopularPoses popularPoses) {
+        Intent intentpp = new Intent(getContext(), DetailppActivity.class);
+        intentpp.putExtra("popularPoses", popularPoses);
+        startActivity(intentpp);
+    }
 }

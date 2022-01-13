@@ -1,5 +1,7 @@
 package vn.edu.huflit.yogadaily;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -83,10 +86,14 @@ public class ItemFragment extends Fragment implements ItemAdapter.Listener{
         itemAdapter = new ItemAdapter(arrayList,this);
         rvItems.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         rvItems.setAdapter(itemAdapter);
+
     }
+
 
     @Override
     public void onClick(Items items) {
-
+        Intent intent = new Intent(getContext(), DetailActivity.class);
+        intent.putExtra("item", items);
+        startActivity(intent);
     }
 }

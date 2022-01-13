@@ -2,9 +2,10 @@ package vn.edu.huflit.yogadaily;
 
 import android.media.Image;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Items {
+public class Items implements Serializable {
     String itemName;
     String itemDes;
     int itemImg;

@@ -1,6 +1,8 @@
 package vn.edu.huflit.yogadaily;
 
-public class PopularPoses {
+import java.io.Serializable;
+
+public class PopularPoses implements Serializable {
     String name;
     int image;
 
