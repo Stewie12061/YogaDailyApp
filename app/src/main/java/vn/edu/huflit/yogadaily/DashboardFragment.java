@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import java.util.ArrayList;
 
 /**
@@ -26,6 +27,7 @@ public class DashboardFragment extends Fragment implements DashboardAdapter.List
     RecyclerView rvCategories;
     ArrayList<Categories> arrayList;
     DashboardAdapter dashboardAdapter;
+    DBHelper dbHelper;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -65,6 +67,7 @@ public class DashboardFragment extends Fragment implements DashboardAdapter.List
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+//        dbHelper = new DBHelper(getContext());
     }
 
     @Override
@@ -79,7 +82,14 @@ public class DashboardFragment extends Fragment implements DashboardAdapter.List
         super.onViewCreated(view, savedInstanceState);
 
         rvCategories = view.findViewById(R.id.rvCategories);
+
+//        if (arrayList != null)
+//        {
+//            arrayList.clear();
+//        }
         arrayList = AppData.init_data();
+//        arrayList = dbHelper.getAllCategories();
+
         dashboardAdapter = new DashboardAdapter(arrayList, this);
         rvCategories.setLayoutManager(new GridLayoutManager(getContext(),2));
         rvCategories.setAdapter(dashboardAdapter);

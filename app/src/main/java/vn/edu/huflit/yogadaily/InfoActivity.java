@@ -48,12 +48,9 @@ public class InfoActivity extends AppCompatActivity {
                     edtAge.setError("You have to fill this information");
                     return;
                 }
-
-
                 if(edtName.getText().toString().isEmpty()){
-                    Intent intent1 = new Intent(InfoActivity.this, MainActivity.class);
-                    intent1.putExtra("name", "Gorgeous");
-                    startActivity(intent1);
+                    edtName.setError("You have to fill this information");
+                    return;
                 }
                 else {
                     editor.putString("height", edtHeight.getText().toString());
@@ -79,10 +76,11 @@ public class InfoActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("data",Context.MODE_PRIVATE);
         String height  = sharedPreferences.getString("height", "");
         String weight = sharedPreferences.getString("weight", "");
-        String name  = sharedPreferences.getString("name", "");
+        String name  = sharedPreferences.getString("name", "Gorgeous");
         String age = sharedPreferences.getString("age", "");
         boolean radiogr = sharedPreferences.getBoolean("radio",true);
         if (!height.isEmpty() && !weight.isEmpty() && !name.isEmpty() && !age.isEmpty()){
+            edtName.setText(sharedPreferences.getString("name", ""));
             Intent intent = new Intent(InfoActivity.this, MainActivity.class);
             intent.putExtra("name", edtName.getText().toString());
             startActivity(intent);

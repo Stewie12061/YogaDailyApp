@@ -91,20 +91,63 @@ It adds no calories to your body, so the more you eat, the more weight you lose,
     <string name="poses_abs_des_10">Extend some love to your often neglected side body in Parighasana or Gate Pose.</string>
 
     !-- arm -->
-    <string name="poses_arms"></string>
-
+    <string name="poses_arm_name_1">Variations For Side Plank</string>
+    <string name="poses_arm_des_1">Challenge your balance and stretch your body in all the same ways as Vasisthasana, while dialing down the difficulty.</string>
+    <string name="poses_arm_name_2">Upward Facing Two-Foot Staff Pose</string>
+    <string name="poses_arm_des_2">Can you practice Wheel with straight arms and Headstand without strain? Then, you are ready.</string>
+    <string name="poses_arm_name_3">Upward-Facing Bow Pose</string>
+    <string name="poses_arm_des_3">Need an energy boost? Urdhva Dhanurasana can help—and strengthen your arms, legs, abdomen, and spine in the process.</string>
+    <string name="poses_arm_name_4">Supported Headstand</string>
+    <string name="poses_arm_des_4">Standing on your head in Salamba Sirsasana strengthens the whole body and calms the brain.</string>
+    <string name="poses_arm_name_5">Side Plank Pose</string>
+    <string name="poses_arm_des_5">A powerful arm and wrist strengthener, Side Plank takes its two-armed sibling to the next level, as an arm balance.</string>
 
     !-- hip -->
-    <string name="poses_hips"></string>
+    <string name="poses_hip_name_1">Eagle Pose</string>
+    <string name="poses_hip_des_1">You need strength, flexibility, and endurance, and unwavering concentration for Eagle Pose.</string>
+    <string name="poses_hip_name_2">Cow Face Pose</string>
+    <string name="poses_hip_des_2">Can not see the cow face? Notice that the crossed legs look like the lips. The bent-elbow arms, one up and one down, are the ears.</string>
+    <string name="poses_hip_name_3">Cat Pose</string>
+    <string name="poses_hip_des_3">This pose provides a gentle massage to the spine and belly organs.</string>
+    <string name="poses_hip_name_4">Bharadvaja’s Twist</string>
+    <string name="poses_hip_des_4">Bharadvaja is Twist, called Bharadvajasana in Sanskrit, is a genetle and loving twist for the spine and adominals. This post inspires postural and body awareness.</string>
+    <string name="poses_hip_name_5">Big Toe Pose</string>
+    <string name="poses_hip_des_5">This pose gently lengthens and strengthens even stubbornly tight hamstrings.</string>
 
     !-- knee -->
-    <string name="poses_knees"></string>
-
+    <string name="poses_knee_name_1">Half Frog Pose</string>
+    <string name="poses_knee_des_1">Ease up into Half Frog Pose, called Ardha Bhekasana in Sanskrit. This pose strengthens the back while gently opening up the shoulders, chest, and thighs—a loving treat for the entire body.</string>
+    <string name="poses_knee_name_2">Hero Pose</string>
+    <string name="poses_knee_des_2">Virasana is a balm for tired legs at the end of the day, as well as an alternative to Lotus for seated meditation.</string>
+    <string name="poses_knee_name_3">Heron Pose</string>
+    <string name="poses_knee_des_3">Heron Pose is an intense hamstring stretch. You may need to give Krounchasana some time.</string>
+    <string name="poses_knee_name_4">Noose Pose</string>
+    <string name="poses_knee_des_4">In the noose pose, the arms are wrapped around the squatting legs and the hands are clasped behind the back, forming a "noose."</string>
+    <string name="poses_knee_name_5">One-Legged King Pigeon Pose</string>
+    <string name="poses_knee_des_5">Eka Pada Rajakapotasana is a deep hip opener and forward bend that you should approach consciously to reap its many benefits.</string>
 
     !-- back -->
-    <string name="poses_back"></string>
-
+    <string name="poses_back_name_1">Ayurveda</string>
+    <string name="poses_back_des_1">Although standing orients your spine into proper posture, standing for too long can cause back pain. Incorporating a yoga routine can help relieve pain.</string>
+    <string name="poses_back_name_2">Chair Pose</string>
+    <string name="poses_back_des_2">Utkatasana powerfully strengthens the muscles of the arms and legs, but it also stimulates the diaphragm and heart.</string>
+    <string name="poses_back_name_3">Cobra Pose</string>
+    <string name="poses_back_des_3">By providing a conscious opening in the chest and stretch in the shoulders, Cobra Pose, called Bhujangasana in Sanskrit, fights fatigue and relieves lower back pain, boosting both the energetic and the physical body.</string>
+    <string name="poses_back_name_4">Dolphin Pose</string>
+    <string name="poses_back_des_4">Dolphin pose strengthens the core, arms, and legs, while also nicely opening the shoulders.</string>
+    <string name="poses_back_name_5">Downward-Facing Dog</string>
+    <string name="poses_back_des_5">One of yoga is most widely recognized poses, Adho Mukha Svanasana strengthens the core and improves circulation, while providing a delicious, full-body stretch.</string>
 
     !-- leg -->
-    <string name="poses_legs"></string>
+    <string name="poses_leg_name_1">Pyramid Pose</string>
+    <string name="poses_leg_des_1">Parsvottanasana encourages balance, body awareness, and inspires confidence.</string>
+    <string name="poses_leg_name_2">Extended Side Angle Pose</string>
+    <string name="poses_leg_des_2">Find length in your side body, from your heel to your fingertips with Extended Side Angle Pose.</string>
+    <string name="poses_leg_name_3">Garland Pose</string>
+    <string name="poses_leg_des_3">An excellent facilitator of good pelvic floor health, Garland Pose, called Malasana in Sanskrit, stretches the ankles, groins, and back while stimulating proper digestion. No worries if your heels do not reach the floor—simply rest them on a folded blanket.</string>
+    <string name="poses_leg_name_4">Half Frog Pose</string>
+    <string name="poses_leg_des_4">Ease up into Half Frog Pose, called Ardha Bhekasana in Sanskrit. This pose strengthens the back while gently opening up the shoulders, chest, and thighs—a loving treat for the entire body.</string>
+    <string name="poses_leg_name_5">High Lunge</string>
+    <string name="poses_leg_des_5">High Lunge
+Counteract the effects of Modern-Day Sitting Syndrome by lengthening your hip flexors in High Lunge.</string>
 </resources>

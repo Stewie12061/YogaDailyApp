@@ -31,6 +31,7 @@ public class ItemFragment extends Fragment implements ItemAdapter.Listener{
     RecyclerView rvItems;
     ArrayList<Items> arrayList;
     ItemAdapter itemAdapter;
+    DBHelper dbHelper;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -70,6 +71,7 @@ public class ItemFragment extends Fragment implements ItemAdapter.Listener{
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        dbHelper = new DBHelper(getContext());
         setHasOptionsMenu(true);
     }
 
