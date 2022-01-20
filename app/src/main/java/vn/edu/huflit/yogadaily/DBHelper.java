@@ -4,30 +4,25 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class DBHelper {
+public class DBHelper extends SQLiteOpenHelper {
 
-    Context context;
+    private static final String DATABSE_NAME = "YogaDaily.db";
+    private static final int DATABASE_VERSION = 1;
 
-    String dbName = "YogaDaily.db";
-
-    public DBHelper(Context context) {
-        this.context = context;
-    }
-    private SQLiteDatabase openDB() {
-        return context.openOrCreateDatabase(dbName, Context.MODE_PRIVATE, null);
+    public DBHelper(@Nullable Context context) {
+        super(context, DATABSE_NAME, null, DATABASE_VERSION);
     }
 
-    private void closeDB(SQLiteDatabase db) {
-        db.close();
-    }
-
-    public void createTable() {
-        SQLiteDatabase db = openDB();
-        String sqlCategories = "CREATE TABLE IF NOT EXISTS tblCategories (" +
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        String sqlCategories = "CREATE TABLE IF NOT EXISTS tbtCategories (" +
                 " CategoriesID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                 " Name TEXT," +
                 " Image INTEGER );";
@@ -39,11 +34,20 @@ public class DBHelper {
                 " CategoriesID INTEGER );";
         db.execSQL(sqlCategories);
         db.execSQL(sqlItem);
-        closeDB(db);
     }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        //Xoá bảng cũ
+        db.execSQL("DROP TABLE IF EXISTS tblCategories");
+        db.execSQL("DROP TABLE IF EXISTS tblItem");
+        //Tiến hành tạo bảng mới
+        onCreate(db);
+    }
+
     public ArrayList<Categories> getAllCategories() {
-        SQLiteDatabase db = openDB();
         ArrayList<Categories> arrayList = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
         String sql = "select * from tblCategories";
         Cursor cursor = db.rawQuery(sql, null);
         if (cursor != null) {
@@ -56,13 +60,12 @@ public class DBHelper {
                 } while (cursor.moveToNext());
             }
         }
-        closeDB(db);
         return arrayList;
     }
 
     public ArrayList<Items> getALLItems() {
-        SQLiteDatabase db = openDB();
         ArrayList<Items> arr = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
         String sql = "select * from tblItem";
         Cursor csr = db.rawQuery(sql, null);
         if (csr != null) {
@@ -77,51 +80,48 @@ public class DBHelper {
                 } while (csr.moveToNext());
             }
         }
-        closeDB(db);
         return arr;
     }
 
-    public Items getItemDetail(int idItems){
-        SQLiteDatabase db = openDB();
-        String sql = "select * from tblItem where ID="+idItems;
-        Cursor csr = db.rawQuery(sql, null);
-        if (csr != null) {
-            if (csr.moveToFirst()) {
-                int id = csr.getInt(0);
-                String name = csr.getString(1);
-                int image = csr.getInt(2);
-                String description = csr.getString(3);
-                int categoriesID = csr.getInt(4);
-                closeDB(db);
-                return new Items(name,description,image,categoriesID,id);
-            }
-        }
-        closeDB(db);
-        return null;
-    }
+//    public Items getItemDetail(int idItems){
+//        SQLiteDatabase db = getReadableDatabase();
+//        String sql = "select * from tblItem where ID="+idItems;
+//        Cursor csr = db.rawQuery(sql, null);
+//        if (csr != null) {
+//            if (csr.moveToFirst()) {
+//                int id = csr.getInt(0);
+//                String name = csr.getString(1);
+//                int image = csr.getInt(2);
+//                String description = csr.getString(3);
+//                int categoriesID = csr.getInt(4);
+//                return new Items(name,description,image,categoriesID,id);
+//            }
+//        }
+//        return null;
+//    }
 
 
     public void insertCategories(Categories categories) {
+        SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("Name", categories.categoryName);
         contentValues.put("Image", categories.categoryImg);
-        SQLiteDatabase db = openDB();
         db.insert("tblCategories", null,contentValues);
-        closeDB(db);
+        db.close();
     }
     public void insertItem(Items items){
+        SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("NAME", items.itemName);
+        contentValues.put("Name", items.itemName);
         contentValues.put("Description", items.itemDes);
         contentValues.put("Image", items.itemImg);
         contentValues.put("CategoriesID", items.idcategories);
-        SQLiteDatabase db = openDB();
         db.insert("tblItem",null, contentValues);
-        closeDB(db);
+        db.close();
     }
 
     public int countCategories(){
-        SQLiteDatabase db = openDB();
+        SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query("tblCategories",null,null,null,null,null,null);
         if(cursor.moveToFirst()){
             return cursor.getCount();

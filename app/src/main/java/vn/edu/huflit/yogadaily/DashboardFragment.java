@@ -67,7 +67,7 @@ public class DashboardFragment extends Fragment implements DashboardAdapter.List
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-//        dbHelper = new DBHelper(getContext());
+        dbHelper = new DBHelper(getContext());
     }
 
     @Override
@@ -87,8 +87,8 @@ public class DashboardFragment extends Fragment implements DashboardAdapter.List
 //        {
 //            arrayList.clear();
 //        }
-        arrayList = AppData.init_data();
-//        arrayList = dbHelper.getAllCategories();
+//        arrayList = AppData.init_data();
+        arrayList = dbHelper.getAllCategories();
 
         dashboardAdapter = new DashboardAdapter(arrayList, this);
         rvCategories.setLayoutManager(new GridLayoutManager(getContext(),2));
