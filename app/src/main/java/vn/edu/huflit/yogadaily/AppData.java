@@ -12,6 +12,7 @@ public class AppData extends Application {
 
         super.onCreate();
         dbHelper = new DBHelper(this);
+        dbHelper.countCategories();
 
         if (dbHelper.countCategories() == 0)
         {

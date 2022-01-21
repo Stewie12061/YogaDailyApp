@@ -22,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sqlCategories = "CREATE TABLE IF NOT EXISTS tbtCategories (" +
+        String sqlCategories = "CREATE TABLE IF NOT EXISTS tblCategories (" +
                 " CategoriesID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                 " Name TEXT," +
                 " Image INTEGER );";
@@ -38,10 +38,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //Xoá bảng cũ
         db.execSQL("DROP TABLE IF EXISTS tblCategories");
         db.execSQL("DROP TABLE IF EXISTS tblItem");
-        //Tiến hành tạo bảng mới
         onCreate(db);
     }
 
@@ -82,23 +80,6 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return arr;
     }
-
-//    public Items getItemDetail(int idItems){
-//        SQLiteDatabase db = getReadableDatabase();
-//        String sql = "select * from tblItem where ID="+idItems;
-//        Cursor csr = db.rawQuery(sql, null);
-//        if (csr != null) {
-//            if (csr.moveToFirst()) {
-//                int id = csr.getInt(0);
-//                String name = csr.getString(1);
-//                int image = csr.getInt(2);
-//                String description = csr.getString(3);
-//                int categoriesID = csr.getInt(4);
-//                return new Items(name,description,image,categoriesID,id);
-//            }
-//        }
-//        return null;
-//    }
 
 
     public void insertCategories(Categories categories) {
